@@ -1,11 +1,11 @@
-import Image from "next/image";
 import { Github } from "lucide-react";
+import Image from "next/image";
 
 export const GHLink = () => {
   return (
     <a
       className="relative h-full w-full group flex flex-col justify-between overflow-hidden rounded-2xl text-white transform-gpu transition-all duration-500 will-change-[outline,_transform] group-hover:scale-95 active:scale-100 hover:scale-95"
-      href="http://github.com/0xSabdadev"
+      href="http://github.com/codenamekii"
       target="_blank"
     >
       <span
@@ -13,8 +13,8 @@ export const GHLink = () => {
         className="pointer-events-none absolute inset-0 -z-20"
       >
         <Image
-          src={"/0002.jpg"}
-          alt="cat img"
+          src={"/0003.jpg"}
+          alt="math"
           width={300}
           height={300}
           priority={true}
@@ -32,7 +32,7 @@ export const GHLink = () => {
       </span>
       <span className="space-y-0.5 px-6 pb-6">
         <span className="block font-semibold">GitHub 実</span>
-        <span className="block text-sm">Ma onchain playground 🔮</span>
+        <span className="block text-sm">Ma Digital Playground 🗿</span>
       </span>
     </a>
   );

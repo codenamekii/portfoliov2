@@ -53,7 +53,7 @@ export const getGHStats = cache(
           }
         }
       `,
-      { login: "0xSabdadev" }
+      { login: "Kiifiki" }
     );
     return {
       issues: user.closedIssues.totalCount + user.openIssues.totalCount,

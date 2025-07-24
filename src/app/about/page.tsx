@@ -3,12 +3,9 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ResumeCard } from "@/components/resume-card";
 import { TimeLineCard } from "@/components/timeline-card";
-import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/config/site.config";
-import { SKILLS } from "@/data/config/skills.config";
 import { WORK } from "@/data/config/work.config";
 import Image from "next/image";
-import React from "react";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -21,7 +18,16 @@ export default function About() {
           delay={BLUR_FADE_DELAY}
           className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
           yOffset={8}
-          text={`Yo, I'm ${DATA.name} 🚀`}
+          text={
+            <>
+              Yo, I'm {DATA.name}{" "}
+              <img
+                src="/emoji/513.gif"
+                alt="🚀"
+                className="inline-block w-10 h-10 align-middle"
+              />
+            </>
+          }
         />
         <BlurFade delay={BLUR_FADE_DELAY * 2}>
           <p className="text-lg text-muted-foreground mb-6">
@@ -31,7 +37,7 @@ export default function About() {
 
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <Image
-            src="/quote.gif"
+            src="/aboutme.gif"
             alt="quote"
             width={1920}
             height={1080}

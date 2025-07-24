@@ -87,7 +87,7 @@ export function ProjectCard({
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
           {active ? (
-           <p className="font-sans text-xs text-green-500 animate-pulse">Developing... </p>
+            <p className="font-sans text-xs text-green-500 animate-pulse">Developing... </p>
           ):(
             <time className="font-sans text-xs">{dates}</time>
           )}

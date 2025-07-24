@@ -1,7 +1,6 @@
 import { BlogCard } from "@/components/blog-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
-import Link from "next/link";
 
 export const metadata = {
   title: "Blog",
@@ -24,7 +23,7 @@ export default async function BlogPage() {
                 Droppin' some thoughts
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-Deep-divin' into the world of tech, crypto, and the wild ride that is life. Check out my latest drops – hope they vibe with you!
+                  Writing about front-end stuff, small side projects, and technical things that sometimes mess with your head (or hype you up). Simple, straight to the point, and ready to try out. Give it a read—might just click with you.
                 </p>
               </div>
             </div>

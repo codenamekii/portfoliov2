@@ -1,16 +1,16 @@
 "use client";
 
-import { getCalApi } from "@calcom/embed-react";
-import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { getCalApi } from "@calcom/embed-react";
 import { CalendarDays } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export function ScheduleCallFloat() {
   const { theme } = useTheme();
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "jasonalhilal" });
+      const cal = await getCalApi({ namespace: "kiifiki" });
       cal("ui", {
         theme: theme === "dark" ? "dark" : "light",
         cssVarsPerTheme: {
@@ -24,8 +24,8 @@ export function ScheduleCallFloat() {
   }, [theme]);
   return (
     <Button
-      data-cal-namespace="jasonalhilal"
-      data-cal-link="jasonalhilal"
+      data-cal-namespace="kiifiki"
+      data-cal-link="kiifiki"
       data-cal-config='{"layout":"month_view"}'
       className="group/cal fixed z-50 md:bottom-5 bottom-20 right-5 w-12 h-12 rounded-full hover:px-4 hover:w-auto p-2 duration-300 transition-all ease-out"
     >

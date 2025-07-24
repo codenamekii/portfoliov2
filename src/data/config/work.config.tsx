@@ -2,157 +2,109 @@ import { ExternalLink, Link } from "lucide-react";
 
 export const WORK = [
   {
-    title: "Indodax (Web3 Ecosystem)",
-    role: "Fullstack Web3 Engineer",
+    title: "Makassar Islamic University",
+    role: "Freelance Web Developer",
     dates: "Jan - Present",
-    location: "Hybrid, Jakarta Selatan (Indonesia)",
+    location: "Hybrid, Makassar (Indonesia)",
     description: [
       {
-        text: "Collaborated directly with CTO and CEO on enhancing feature development for minting, redeeming, and bridging tokens across EVM networks (BSC, Polygon) and Solana, including administration and management functionalities for IDRX Stablecoins.",
-        technologies: ["NestJS", "NuxtJS", "Vuex", "Vuetify", "Prisma", "Rust", "Solidity"]
+        text: "I build websites that run smooth, look good, and don’t break when you blink. Fast dev cycles, clean logic, and no spaghetti code",
+        technologies: ["NextJS", "Typescript", "TailwindCSS", "Firebase", "Prisma","Vercel"]
       },
       {
-        text: "Enhanced a sophisticated multi-chain banking integration selection, enabling seamless fiat on/off-ramps for token redemption across various e-wallets and traditional banking platforms for IDRX Stablecoins.",
-        technologies: ["NestJS", "Prisma"]
+        text: "From landing pages to full-stack apps, I handle it. Need a fix? I got it. Need it deployed tonight? Bet.",
+        technologies: ["ReactJS", "NodeJS", "MongoDB", "ExpressJS", "Rest APIs", "GIT"]
       },
       {
-        text: "Developed an advanced administrative dashboard for comprehensive token lifecycle management, including mint, redeem, and bridge operations, with robust data visualization, filtering, and export capabilities to support Business Development initiatives for IDRX Stablecoins.",
-        technologies: ["NuxtJS", "Vuex", "Vuetify"]
+        text: "I vibe with both UI and backend. I write clean code, but still care about pixels. Your users won’t bounce — promise.",
+        technologies: ["NuxtJS", "Vuex", "SCSS", "Pinia", "Supabase", "Netlify"]
       },
       {
-        text: "Enhanced a dynamic transaction fee system for cross-chain token operations, optimizing gas costs and enhancing platform sustainability across EVM-compatible networks and Solana for IDRX Stablecoins.",
-        technologies: ["NestJS", "Solidity", "Rust"]
+        text: "Been working remote for years. I get sh*t done without drama. I build fast, communicate clear, and don’t ghost.",
+        technologies: ["Laravel", "Inertia", "Livewire", "AlpineJS", "Filament", "MySQL"]
       },
-      {
-        text: "Engineered a balance monitoring system for third-party payment gateways, ensuring optimal liquidity management and operational efficiency for IDRX Stablecoins.",
-        technologies: ["NestJS", "NuxtJS", "Vuex"]
-      },
-      {
-        text: "Developed an innovative retry mechanism for failed token swaps, significantly improving the success rate of cross-chain operations for IDRX Stablecoins.",
-        technologies: ["NestJS", "Web3.js", "Solana Web3.js"]
-      },
-      {
-        text: "Created a fault-tolerant redeem request processing system, implementing advanced error handling and recovery procedures to ensure robust token redemption across multiple blockchains for IDRX Stablecoins.",
-        technologies: ["NestJS"]
-      },
-      {
-        text: "Partnered with CTO to develop swapping features for EVM tokens on Base, Avalanche, and Arbitrum networks, as part of the Nusa DEX initiatives for Nusa Finance.",
-        technologies: ["jQuery", "Codeigniter"]
-      },
-      {
-        text: "Architected and implemented a high-performance, data-intensive home page for Nusa DEX V2, featuring real-time token metrics (gainers, losers, trending) across multiple networks. Optimized for speed using Incremental Static Regeneration (ISR), server-side rendering, and strategic preloading techniques.",
-        technologies: ["NextJS", "TypeScript"]
-      },
-      {
-        text: "Engineered a robust backend token API with advanced resilience mechanisms, including exponential backoff, intelligent retry logic with state persistence, and TTL caching, ensuring high availability and performance under load for Nusa DEX V2.",
-        technologies: ["Codeigniter", "PHP"]
-      },
-      {
-        text: "Developed a sophisticated same-chain swap engine, incorporating functionalities such as reverse routing, dynamic slippage adjustment, and gas optimization for Nusa DEX V2.",
-        technologies: ["NextJS", "TypeScript", "Web3.js"]
-      },
-      {
-        text: "Implemented a seamless user experience with reactive price quoting and an indexer-powered swap history. Optimized performance using Incremental Static Regeneration (ISR) and server-side rendering for efficient loading of extensive swap history data for Nusa DEX V2.",
-        technologies: ["NextJS", "TypeScript", "Web3.js"]
-      },
-      {
-        text: "Developed a sophisticated swap feature on the Base network using 0x API, including search token functionality, reverse swap capability, slippage percentage settings, and swap history tracking for Tokenomy.",
-        technologies: ["Next.js", "TypeScript", "Web3.js"]
-      },
-      {
-        text: "Developed an event logging and indexing system for $TEN stakers, featuring detailed event logs (stake, unbound, withdraw), real-time indexing, state data management, and an integrated admin staking dashboard for Tokenomy.",
-        technologies: ["Next.js", "TypeScript", "Web3.js", "CodeIgniter"]
-      }
     ],
-    image: "/indodax.png",
+    image: "/UIM.png",
     links: [
       {
         title: "Website",
-        href: "https://www.indodax.com/",
+        href: "https://uim-makassar.ac.id/",
         icon: <Link className="size-3" />,
       },
       {
         title: "Proof",
-        href: "https://linkedin.com/in/jasonalhilal",
+        href: "https://www.linkedin.com/in/taufiqurrahman-fiki-583338188/",
         icon: <ExternalLink className="size-3" />,
       },
     ],
   },
   {
-    title: "Mandiri Tunas Finance",
-    role: "Software Engineer",
-    dates: "Jan - Mar, 2023",
-    location: "On-site, Jakarta Pusat (Indonesia)",
+    title: "PT. Survey Teknologi Indonesia",
+    role: "Frontend Developer Intern",
+    dates: "Jun - Dec, 2023",
+    location: "Hybrid, Makassar (Indonesia)",
     description: [
         {
-          text: "Worked closely with Corporate Performance and Planning Management (CPM) division to develop branch performance monitoring web based application (MyBranch) for all head managers of PT Mandiri Tunas Finance around Indonesia",
+        text: "Built a full-on company website from scratch for a mining and geotechnical consulting firm — boosting their online presence and making ‘em look pro to potential clients.",
           technologies: []
         },
         {
-          text: "Sliced UI design fully responsive and improved web accessibility, SEO, performance, and best practices with Progressively Enhanced Multi-Page Apps (PEMPAs) Architecture.",
-          technologies: ["JavaScript","Bootstrap","jQuery","Hotwire Turbo"]
+          text: "Handled the full UI slicing process, turned mockups into a responsive layout that looks clean on both engineer desktops and mobile devices out in the field",
+          technologies: ["JavaScript","TailwindCSS",]
         },
         {
-          text: "Developed authentication, authorization, multifinance management, also performance monitoring services (ex: sales strategy, collection strategy,SLA branch,etc).",
-          technologies: ["Codeigniter"]
+          text: "keep things smooth, not boring. Included all the must-haves: company profile, services, mining project portfolio, and direct-contact links (WhatsApp, email, etc.)",
+          technologies: ["NextJs", "TailwindCSS", "ReactJS", "Vercel"]
         },
         {
-          text: "Implementing clean code and security best practices at the agile scrum development stage process.",
-          technologies: ["OpenSSL", "Libsodium", "SQL Server", "Query Builder"]
+          text: "Took care of all frontend logic, dynamic routing, and even some custom content formatting with markdown/JSON. Also helped the internal team understand how to manage their site content without always calling devs for small stuff",
+          technologies: []
         }
     ],
-    image: "/mtf.png",
-    mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+    image: "/STI.png",
+    mlh: "",
     links: [
       {
         title: "Website",
-        href: "https://www.mtf.co.id/",
+        href: "https://indosurtek.com/",
         icon: <Link className="size-3" />,
       },
       {
         title: "Proof",
-        href: "htpps://linkedin.com/in/jasonalhilal",
+        href: "https://www.linkedin.com/in/taufiqurrahman-fiki-583338188/",
         icon: <ExternalLink className="size-3" />,
       },
     ],
   },
   {
-    title: "TEDx Semarang",
-    role: "Fullstack Engineer",
-    dates: "Apr - Jun, 2024",
-    location: "Remote, Semarang (Indonesia)",
+    title: "CV. Ideal Creative Printing",
+    role: "screen printing crew",
+    dates: "Mar 2021 - Sept 2022",
+    location: "On-Site, Makassar (Indonesia)",
     description: [
       {
-        text: "Collaborated with other divisions to brainstorm, design, and develop a service product to help people participate in the TEDx event series.",
+        text: "Operated manual and semi-auto screen printing machines for t-shirts, tote bags, and custom merch, ensuring clean and accurate results",
         technologies: []
       },
       {
-        text: "Responsible for brainstorming, developing, testing, collaborating, code reviewing, debugging, and deploying frontend features.",
-        technologies: ["GitHub"]
-      },
-      {
-        text: "Sliced UI design into a website and improved user experiences.",
-        technologies: ["Bootstrap", "SCSS", "JavaScript"]
-      },
-      {
-        text: "Implemented front-end engineering best practices and patterns and presented them to other engineers.",
+        text: "Handled prep work like screen setup, film transfer, ink mixing, and post-print cleanup to keep the workflow smooth and efficient",
         technologies: []
       },
       {
-        text: "Migrated backend service into a new system with a better design pattern.",
-        technologies: ["Express.js"]
+        text: "Worked closely with design and finishing team to match print layout, troubleshoot misalignments, and hit daily production targets.",
+        technologies: []
       }
     ],
-    image: "/tedex.png",
+    image: "/sablon.png",
     links: [
       {
         title: "Website",
-        href: "https://www.tedx.com/",
+        href: "#",
         icon: <Link className="size-3" />,
       },
       {
         title: "Proof",
-        href: "https://linkedin.com/in/jasonalhilal",
+        href: "https://www.linkedin.com/in/taufiqurrahman-fiki-583338188/",
         icon: <ExternalLink className="size-3" />,
       },
     ],

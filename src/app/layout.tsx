@@ -1,16 +1,16 @@
+import BottomNavbar from "@/components/bottom-navbar";
+import { ScheduleCallFloat } from "@/components/cal";
 import { ThemeProvider } from "@/components/theme-provider";
+import { TopNavbar } from "@/components/top-navbar";
+import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/config/site.config";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { TopNavbar } from "@/components/top-navbar";
-import BottomNavbar from "@/components/bottom-navbar";
-import { ScheduleCallFloat } from "@/components/cal";
-import { Analytics } from "@vercel/analytics/react"
-import { Toaster } from "@/components/ui/sonner";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,22 +25,22 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   keywords: [
-    "Jason Riskova",
-    "0xSabdadev",
-    "Jason Riskova Portfolio",
-    "Jason Riskova Projects",
-    "Jason Riskova Blogs",
-    "Jason Riskova Resume",
-    "Jason Riskova Contact",
-    "Jason Riskova Instagram",
-    "Jason Riskova Youtube",
-    "Jason Riskova Email",
-    "Jason Riskova LinkedIn",
-    "Jason Riskova GitHub",
-    "Jason Riskova Twitter",
-    "oxsabdadev",
-    "0xSabdadev",
-    "0xSabdadev10",
+    "Taufiqurrahman",
+    "Kiifiki",
+    "Taufiqurrahman Portfolio",
+    "Taufiqurrahman Projects",
+    "Taufiqurrahman Blogs",
+    "Taufiqurrahman Resume",
+    "Taufiqurrahman Contact",
+    "Taufiqurrahman Instagram",
+    "Taufiqurrahman Youtube",
+    "Taufiqurrahman Email",
+    "Taufiqurrahman LinkedIn",
+    "Taufiqurrahman GitHub",
+    "Taufiqurrahman Twitter",
+    "kii",
+    "Kiifiki",
+    "Kiifiki",
   ],
   authors: [
     {

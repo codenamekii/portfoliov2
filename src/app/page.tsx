@@ -1,30 +1,25 @@
 "use client";
-import { useState, useEffect } from "react";
 import { Lens } from "@/components/acternityui/lens";
+import { Spotlight } from "@/components/acternityui/spotlight";
+import { PlaceholdersAndVanishInput } from "@/components/acternityui/vanish-input";
+import ClientOnlyTime from "@/components/ClientOnlyTime";
+import { GridCards } from "@/components/grid-cards";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import Skill from "@/components/skill";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PROJECTS } from "@/data/config/projects.config";
 import { DATA } from "@/data/config/site.config";
 import {
-  AlarmClock,
-  CircleArrowOutUpRight,
-  LocateFixed,
-  Paperclip,
-  PartyPopper,
+  AlarmClock
 } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { PlaceholdersAndVanishInput } from "@/components/acternityui/vanish-input";
-import { Spotlight } from "@/components/acternityui/spotlight";
-import { PROJECTS } from "@/data/config/projects.config";
-import { BlogCard } from "@/components/blog-card";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { toast } from "sonner";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GridCards } from "@/components/grid-cards";
 const BLUR_FADE_DELAY = 0.04;
 
 interface BlogsI {
@@ -59,7 +54,7 @@ export default function Page() {
       } catch (error) {
         console.error("Error fetching blog posts:", error);
       }
-    };
+    };  // console.log(blogPosts)
 
     const checkNewsletterSubscription = () => {
       if (typeof window !== "undefined") {
@@ -84,7 +79,7 @@ export default function Page() {
   const [hovering, setHovering] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
   const placeholders = [
-    "Send message to 0xSabdadev",
+    "Send message to Kiifiki",
     "Connect to the decentralized future",
     "Drop a message, let's build the metaverse",
     "Deploy your ideas, no central authority",
@@ -105,7 +100,7 @@ export default function Page() {
     }
     setTriggerDisappear(true);
     setIsInputLoading(true);
-    toast.info("Ur message is being mined...");
+    toast.info("Ur message is being send...");
     try {
       const response = await fetch("/api/telegram", {
         method: "POST",
@@ -123,7 +118,7 @@ export default function Page() {
       setIsInputLoading(false);
       console.log("Message successful:", data);
       // Show success toast
-      toast.success(" Tx confirmed! live on-chain to 0xSabdadev!");
+      toast.success(" Tx confirmed! live on-chain to Kiifiki!");
       // Update local storage to indicate subscription
       localStorage.setItem("devwtf-nsl", data.id);
       // Update state to reflect subscription
@@ -161,7 +156,16 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
                 yOffset={8}
-                text={`や, I'm ${DATA.name.split(" ")[0]} 🥷`}
+                text={
+                  <>
+                    や, I'm {DATA.name.split(" ")[0]}{" "}
+                    <img
+                      src="/emoji/512.gif"
+                      alt="moyai"
+                      className="inline w-12 h-12 align-middle"
+                    />
+                  </>
+                }
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl mt-4"
@@ -176,12 +180,7 @@ export default function Page() {
                   </Badge>
                   <Badge variant="secondary" className="cursor-pointer">
                     <AlarmClock className="size-4 mr-1" />
-                    {currentTime.toLocaleTimeString(DATA.localCode, {
-                      timeZone: DATA.timeZone,
-                      hour: "2-digit",
-                      minute: "2-digit",
-                      hour12: true,
-                    })}
+                    <ClientOnlyTime locale={DATA.localCode} timeZone={DATA.timeZone} />
                   </Badge>
                   <Link href={DATA.resume} target="_blank">
                     <Badge variant="secondary" className="flex cursor-pointer">
@@ -223,74 +222,12 @@ export default function Page() {
           <GridCards />
         </BlurFade>
       </section>
-      <section id="blogs">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Fresh Drops ㊗️
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Spillin' thoughts on tech, life, and the decentralized future
-                </h2>
-                <p className="text-muted-foreground md:text-lg/relaxed lg:text-lg/relaxed xl:text-lg/relaxed">
-                  Code, blockchain, and everything in between – I'm always
-                  vibin' on new ideas. Maybe you'll stumble across something
-                  fire. Check out my freshest takes below, or dive deep on my{" "}
-                  <Link href="/blog" className="text-blue-500 hover:underline">
-                    blog page{" "}
-                  </Link>
-                  or{" "}
-                  <Link
-                    href="https://jasonalhilal.medium.com/"
-                    target="_blank"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Medium
-                  </Link>
-                  .
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="flex flex-col gap-3 w-full">
-            <BlurFade delay={BLUR_FADE_DELAY * 14}>
-              <ul className="divide-y divide-dashed">
-                {blogPosts
-                  .filter((post) => post.metadata.featured)
-                  .sort(
-                    (a, b) =>
-                      new Date(b.metadata.publishedAt).getTime() -
-                      new Date(a.metadata.publishedAt).getTime()
-                  )
-                  .slice(0, 3)
-                  .map((post, id) => (
-                    <BlurFade
-                      key={post.slug}
-                      delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                    >
-                      <BlogCard
-                        href={`/blog/${post.slug}`}
-                        title={post.metadata.title}
-                        description={post.metadata.summary}
-                        publishedAt={post.metadata.publishedAt}
-                        iconUrl={post.metadata.icon}
-                        readTime={post.metadata.readTime}
-                      />
-                    </BlurFade>
-                  ))}
-              </ul>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
 
       <section id="projects">
         <div className="flex flex-col items-center">
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm mb-5">
-              Epic Builds 🈂️
+              Epic Shii 🈂️
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -308,11 +245,11 @@ export default function Page() {
                     <div className="flex flex-col items-center justify-center space-y-4 text-center">
                       <div className="space-y-2">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mt-2">
-                          Some of my cool shits
+                          Check Out My Dope Shii
                         </h2>
                         <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                          I&apos;ve been buildin' some dope Web3 stuff, from
-                          slick dApps to full-blown solutions. Here’s a taste of
+                          I've been buildin' some dope and various things, from
+                          slick Apps to full-blown solutions. Here’s a taste of
                           my favs – check out more{" "}
                           <Link
                             href="/projects"
@@ -362,15 +299,13 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Web3 Messaging Hub 🈯️
+                Oy, Hire Me!!!🈯️
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 No Centralized Vibes
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Got something to say? Drop your message below, and let’s talk
-                blockchain, crypto, and all things decentralized. No spam, just
-                straight-up web3 vibes.
+                Got something to say? Drop your message below — questions, ideas, collabs, or just to say hi. No spam, no BS, just real talk.
               </p>
               <div className="pt-10 flex flex-row ">
                 {/* Name Input */}

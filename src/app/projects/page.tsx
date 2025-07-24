@@ -1,13 +1,13 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
-import { PROJECTS } from "@/data/config/projects.config";
-import React from "react";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/components/ui/tabs"
+} from "@/components/ui/tabs";
+import { PROJECTS } from "@/data/config/projects.config";
+import Image from "next/image";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Projects() {
@@ -25,11 +25,17 @@ export default function Projects() {
       <div className="space-y-12 w-full">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Some dope stuff I&apos;ve been hacking on 💻
-                </h2>
+                      <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl flex items-center gap-2">
+                        Some dope stuff I've been hacking on
+                        <Image
+                          src="/emoji/514.gif"
+                          alt="emoji"
+                          width={40}
+                          height={40}
+                        />
+                      </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve been grindin' on all sorts of projects – from slick landing pages to full-on Web3 dApps. Here’s the collection of my builds.
+                  I've been grindin' on all sorts of projects – from slick landing pages to complete full-stack apps. Here’s the collection of my builds.
                 </p>
               </div>
             </div>

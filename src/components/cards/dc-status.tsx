@@ -1,13 +1,13 @@
 import { LanyardResponse } from "@/app/api/discord/route";
+import dndGif from "@/assets/images/dont-disturb.gif";
+import idleGif from "@/assets/images/idle.gif";
+import offlineGif from "@/assets/images/offline.gif";
+import onlineGif from "@/assets/images/online.gif";
+import { Spinner } from "@/components/spinner";
 import fetcher from "@/lib/utils";
 import { DiscordLogoIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
-import useSWR from "swr";
-import { Spinner } from "@/components/spinner";
 import Image, { StaticImageData } from "next/image";
-import onlineGif from "@/assets/images/online.gif";
-import offlineGif from "@/assets/images/offline.gif";
-import idleGif from "@/assets/images/idle.gif";
-import dndGif from "@/assets/images/dont-disturb.gif";
+import useSWR from "swr";
 
 type ApiDiscordStatus = "online" | "dnd" | "idle" | "offline" | undefined;
 
@@ -32,11 +32,11 @@ export const DCStatus = () => {
     if (!status) return "Unknown Status";
     switch (status) {
       case "online":
-        return "onchain 在";
+        return "lockedin 在";
       case "offline":
-        return "offchain 離";
+        return "lockedoff 離";
       case "idle":
-        return "taking a nap";
+        return "zzzzzzzz";
       case "dnd":
         return "dont disturb";
       default:

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { getGHStats } from "@/lib/get-gh-stats";
 
 export const GHStats = () => {
   const [stats, setStats] = useState({
@@ -32,7 +31,7 @@ export const GHStats = () => {
   return (
     <div className="bg-[#f7f2f2] dark:bg-[#0d1117] rounded-2xl h-36 relative group hover:scale-95 duration-500 transform-gpu">
       <a
-        href="http://github.com/0xSabdadev"
+        href="http://github.com/codenamekii"
         target="_blank"
         rel="noopener noreferrer"
       >

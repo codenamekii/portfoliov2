@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import animePic from "@/assets/images/jujutsu.webp";
+import animePic from "@/assets/images/about.jpg";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export const AnimeLinkCard = () => {
   return (
