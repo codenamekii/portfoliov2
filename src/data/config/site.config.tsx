@@ -97,6 +97,7 @@ export const DATA = {
       degree: "Mobile Development",
       logoUrl: "/cibungk.png",
       start: "2021",
+      end: "2021",
     },
   ],
 } as const;
