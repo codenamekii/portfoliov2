@@ -2,7 +2,7 @@
 <img alt="preview" src="https://github.com/0xSabdadev/dev-portfolio/blob/master/public/prev.png" width="90%">
 </div>
 
-# 🚀 Welcome to My Digital Playground
+# 🚀 Welcome to My Digital Playground!!!
 
 Step into the matrix of web brilliance, powered by **Next.js 14**, **Loops**, **Shadcn/UI**, **Acternity UI**, **Magic UI**, and deployed in the mystical realms of **Vercel**. This portfolio isn't just a website. It's an evolution. A digital life form breathing innovation.
 
